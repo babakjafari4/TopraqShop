@@ -3,7 +3,7 @@ using TopraqShop.Framework.Base.Domain;
 
 namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
 {
-    public class ProductCategoryBase : EntityBase<int>
+    public class ProductCategoryBase : EntityBase<byte>
     {
         public string Name { get; private set; }
         public string Description { get; private set; }

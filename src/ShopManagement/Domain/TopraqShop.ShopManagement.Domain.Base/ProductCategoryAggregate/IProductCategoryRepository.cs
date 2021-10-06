@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
 {
@@ -8,5 +10,8 @@ namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
         ProductCategoryBase GetBy(byte id);
         List<ProductCategoryBase> GetAll();
         int Commit();
+
+        bool IsExists(Expression<Func<ProductCategoryBase, bool>> expression);
+        ProductCategoryBase GetDetails(byte id);
     }
 }

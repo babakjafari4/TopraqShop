@@ -1,4 +1,4 @@
-﻿namespace TopraqShop.ShopManagement.Domain.Application.Contracts.ProductCategory
+﻿namespace TopraqShop.ShopManagement.Domain.Application.Contracts.ProductCategory.Concrete
 {
     public class ProductCategoryViewModel
     {
