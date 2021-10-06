@@ -3,18 +3,19 @@ using TopraqShop.Framework.Base.Domain;
 
 namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
 {
-    public class ProductCategory : EntityBase<int>
+    public class ProductCategoryBase : EntityBase<int>
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
         public string Picture { get; private set; }
         public string PictureAlt { get; private set; }
         public string PictureTitle { get; private set; }
-        public string Keywords { get; set; }
-        public string MetaDescription { get; set; }
-        public string Slug { get; set; }
+        public string Keywords { get; private set; }
+        public string MetaDescription { get; private set; }
+        public string Slug { get; private set; }
 
-        public ProductCategory(string name, string description, string picture, string pictureAlt, string pictureTitle, string keywords, string metaDescription, string slug)
+        public ProductCategoryBase(string name, string description, string picture, string pictureAlt, string pictureTitle,
+            string keywords, string metaDescription, string slug)
         {
             Name = name;
             Description = description;
@@ -32,7 +33,8 @@ namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
             CheckInvariants();
         }
 
-        public void Edit(string name, string description, string picture, string pictureAlt, string pictureTitle, string keywords, string metaDescription, string slug)
+        public void Edit(string name, string description, string picture, string pictureAlt, string pictureTitle,
+            string keywords, string metaDescription, string slug)
         {
             Name = name;
             Description = description;

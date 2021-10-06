@@ -11,7 +11,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Instantiate_ShouldCreateNewOne_WhenInputsAreValid()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             productCategory.Status.Should().Be((byte) ProductCategoryStatus.Draft);
             productCategory.CreatedOn.Date.Should().Be(DateTime.Now.Date);
             productCategory.ModifiedOn.Date.Should().Be(DateTime.Now.Date);
@@ -32,42 +32,42 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenNameIsNull()
         {
-            Action action = () => new ProductCategory("", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+            Action action = () => new ProductCategoryBase("", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Name cannot be null!");
         }
 
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenDescriptionIsNull()
         {
-            Action action = () => new ProductCategory("name", "", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+            Action action = () => new ProductCategoryBase("name", "", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Description cannot be null!");
         }
 
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenPictureIsNull()
         {
-            Action action = () => new ProductCategory("name", "description", "", "picture alt", "picture title", "keywords", "meta description", "slug");
+            Action action = () => new ProductCategoryBase("name", "description", "", "picture alt", "picture title", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Picture cannot be null!");
         }
 
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenPictureAltIsNull()
         {
-            Action action = () => new ProductCategory("name", "description", "picture url", "", "picture title", "keywords", "meta description", "slug");
+            Action action = () => new ProductCategoryBase("name", "description", "picture url", "", "picture title", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("PictureAlt cannot be null!");
         }
 
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenPictureTitleIsNull()
         {
-            Action action = () => new ProductCategory("name", "description", "picture url", "picture alt", "", "keywords", "meta description", "slug");
+            Action action = () => new ProductCategoryBase("name", "description", "picture url", "picture alt", "", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("PictureTitle cannot be null!");
         }
 
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenInputsAreInvalid()
         {
-            Action action = () => new ProductCategory(null, null, null, null, null, null, null, null);
+            Action action = () => new ProductCategoryBase(null, null, null, null, null, null, null, null);
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Name cannot be null!");
         }
 
@@ -75,21 +75,21 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenMetaDescriptionIsNull()
         {
-            Action action = () => new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "", "meta description", "slug");
+            Action action = () => new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Keywords cannot be null!");
         }
 
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenSlugIsNull()
         {
-            Action action = () => new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "", "slug");
+            Action action = () => new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("MetaDescription cannot be null!");
         }
 
         [Fact]
         public void Instantiate_ShouldThrowNullReferenceError_WhenKeywordsIsNull()
         {
-            Action action = () => new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "");
+            Action action = () => new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Slug cannot be null!");
         }
 
@@ -97,7 +97,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldEditObject_WhenInputsAreValid()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             productCategory.Edit("name - edited", "description - edited", "picture url - edited",
                 "picture alt - edited", "picture title - edited", "keywords - edited", "meta description - edited", "slug - edited");
 
@@ -130,7 +130,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenNameIsNull()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             Action action = () =>
                 productCategory.Edit("", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Name cannot be null!");
@@ -141,7 +141,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenDescriptionIsNull()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             Action action = () => productCategory.Edit("name", "", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Description cannot be null!");
         }
@@ -150,7 +150,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenPictureIsNull()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             Action action = () => productCategory.Edit("name", "description", "", "picture alt", "picture title", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Picture cannot be null!");
         }
@@ -159,7 +159,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenPictureAltIsNull()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             Action action = () => productCategory.Edit("name", "description", "picture url", "", "picture title", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("PictureAlt cannot be null!");
         }
@@ -168,7 +168,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenPictureTitleIsNull()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             Action action = () => productCategory.Edit("name", "description", "picture url", "picture alt", "", "keywords", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("PictureTitle cannot be null!");
         }
@@ -177,7 +177,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenInputsAreInvalid()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             Action action = () => productCategory.Edit(null, null, null, null, null, null, null, null);
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Name cannot be null!");
         }
@@ -186,7 +186,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenKeywordsIsNull()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             Action action = () => productCategory.Edit("name", "description", "picture url", "picture alt", "picture title", "", "meta description", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Keywords cannot be null!");
         }
@@ -195,7 +195,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenMetaDescriptionIsNull()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             Action action = () => productCategory.Edit("name", "description", "picture url", "picture alt", "picture title", "keywords", "", "slug");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("MetaDescription cannot be null!");
         }
@@ -204,7 +204,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Edit_ShouldThrowNullReferenceError_WhenSlugIsNull()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
 
             Action action = () => productCategory.Edit("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "");
             action.Should().ThrowExactly<NullReferenceException>().WithMessage("Slug cannot be null!");
@@ -214,7 +214,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Activate_ShouldActivateObject_WhenCalled()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             productCategory.Activate();
             productCategory.Status.Should().Be((byte) ProductCategoryStatus.Active);
         }
@@ -223,7 +223,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Deactivate_ShouldMakeObjectInactive_WhenCalled()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             productCategory.Deactivate();
             productCategory.Status.Should().Be((byte) ProductCategoryStatus.Inactive);
         }
@@ -232,7 +232,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.Tests.Unit.ProductCategoryAggreg
         public void Delete_ShouldMakeRecordDeleted_WhenCalled()
         {
             var productCategory =
-                new ProductCategory("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
+                new ProductCategoryBase("name", "description", "picture url", "picture alt", "picture title", "keywords", "meta description", "slug");
             productCategory.Delete();
             productCategory.Status.Should().Be((byte)ProductCategoryStatus.Deleted);
         }

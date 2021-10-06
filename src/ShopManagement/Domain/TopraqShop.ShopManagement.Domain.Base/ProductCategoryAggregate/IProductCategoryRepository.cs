@@ -4,9 +4,9 @@ namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
 {
     public interface IProductCategoryRepository
     {
-        void Create(ProductCategory productCategory);
-        ProductCategory GetBy(byte id);
-        List<ProductCategory> GetAll();
+        void Create(ProductCategoryBase productCategoryBase);
+        ProductCategoryBase GetBy(byte id);
+        List<ProductCategoryBase> GetAll();
         int Commit();
     }
 }
