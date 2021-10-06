@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F09FCA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Domain.Base", "TopraqShop.ShopManagement.Domain.Base\TopraqShop.ShopManagement.Domain.Base.csproj", "{BB555A1F-A734-42FB-A223-D0E724CFA89C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{46D41BE9-D69C-45E7-92AE-36552F5C9920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.Framework.Base", "src\Framework\TopraqShop.Framework.Base\TopraqShop.Framework.Base.csproj", "{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{BB555A1F-A734-42FB-A223-D0E724CFA89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB555A1F-A734-42FB-A223-D0E724CFA89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB555A1F-A734-42FB-A223-D0E724CFA89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -31,6 +39,8 @@ Global
 		{E0C0CBD4-6301-4BAF-A065-A4F01C86F3A1} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
 		{F09FCA0F-22FD-45C5-812A-631958812A73} = {E0C0CBD4-6301-4BAF-A065-A4F01C86F3A1}
 		{BB555A1F-A734-42FB-A223-D0E724CFA89C} = {F09FCA0F-22FD-45C5-812A-631958812A73}
+		{46D41BE9-D69C-45E7-92AE-36552F5C9920} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B} = {46D41BE9-D69C-45E7-92AE-36552F5C9920}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDA1DE0D-7934-4E28-9097-B2D1BD54565D}
