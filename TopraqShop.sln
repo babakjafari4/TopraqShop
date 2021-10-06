@@ -17,6 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.Framework.Base",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Domain.Base", "src\ShopManagement\Domain\TopraqShop.ShopManagement.Domain.Base\TopraqShop.ShopManagement.Domain.Base.csproj", "{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopManagement", "ShopManagement", "{7437686F-A44C-4A9F-A6B2-E406585F3F2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{07754E0D-D731-49F0-A3AC-F93B36B841E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Domain.Base.Tests.Unit", "test\ShopManagement\Domain\TopraqShop.ShopManagement.Domain.Base.Tests.Unit\TopraqShop.ShopManagement.Domain.Base.Tests.Unit.csproj", "{174F859F-CCD8-4694-9889-B973BA228AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,10 @@ Global
 		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174F859F-CCD8-4694-9889-B973BA228AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174F859F-CCD8-4694-9889-B973BA228AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174F859F-CCD8-4694-9889-B973BA228AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174F859F-CCD8-4694-9889-B973BA228AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +51,9 @@ Global
 		{46D41BE9-D69C-45E7-92AE-36552F5C9920} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
 		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B} = {46D41BE9-D69C-45E7-92AE-36552F5C9920}
 		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8} = {F09FCA0F-22FD-45C5-812A-631958812A73}
+		{7437686F-A44C-4A9F-A6B2-E406585F3F2B} = {52D80DCA-AAAF-4B4C-9174-7149B0299233}
+		{07754E0D-D731-49F0-A3AC-F93B36B841E3} = {7437686F-A44C-4A9F-A6B2-E406585F3F2B}
+		{174F859F-CCD8-4694-9889-B973BA228AC4} = {07754E0D-D731-49F0-A3AC-F93B36B841E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDA1DE0D-7934-4E28-9097-B2D1BD54565D}
