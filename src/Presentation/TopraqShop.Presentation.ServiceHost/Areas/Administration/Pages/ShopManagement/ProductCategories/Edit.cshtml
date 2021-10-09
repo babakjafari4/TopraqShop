@@ -1,0 +1,98 @@
+﻿@model TopraqShop.ShopManagement.Domain.Application.Contracts.ProductCategory.Concrete.EditProductCategory
+
+@{
+}
+
+
+<div class="modal-header">
+    <button class="close" type="button" data-dismiss="modal" aria-hidden="True">x</button>
+    <h4 class="modal-title">Update Product Category: @Model.Name</h4>
+</div>
+
+
+<form 
+    asp-page="./Index" 
+    asp-page-handler="Edit" 
+    method="post" 
+    aria-ajax="true" 
+    data-callback="" 
+    data-action="Refresh">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Name"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Name" />
+                    <span class="error" asp-validation-for="Name"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Slug"></label>
+                    <input disabled="" class="form-control" type="text" asp-for="@Model.Slug"  />
+                    <span class="error" asp-validation-for="Slug"></span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Picture"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Picture" />
+                    <span class="error" asp-validation-for="Picture"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.PictureAlt"></label>
+                    <input class="form-control" type="text" asp-for="@Model.PictureAlt"/>
+                    <span class="error" asp-validation-for="PictureAlt"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.PictureTitle"></label>
+                    <input class="form-control" type="text" asp-for="@Model.PictureTitle"/>
+                    <span class="error" asp-validation-for="PictureTitle"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Description"></label>
+                    <textarea  class="form-control" asp-for="Description" onchange="fillField('Description', 'MetaDescription');"></textarea>
+                    <span class="error" asp-validation-for="Description"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Keywords"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Keywords"/>
+                    <span class="error" asp-validation-for="Keywords"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.MetaDescription"></label>
+                    <input class="form-control" type="text" asp-for="@Model.MetaDescription"/>
+                    <span class="error" asp-validation-for="MetaDescription"></span>
+                </div>
+            </div>
+        </div>
+        
+        <input type="hidden" asp-for="Id"  />
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default waves-effect" type="button" data-dismiss="modal">Close</button>
+        <button class="btn btn-success waves-effect waves-light" type="submit">Edit</button>
+    </div>
+</form>

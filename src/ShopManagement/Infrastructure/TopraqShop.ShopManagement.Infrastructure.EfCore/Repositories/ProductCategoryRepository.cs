@@ -3,7 +3,7 @@ using TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate;
 
 namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Repositories
 {
-    public class ProductCategoryRepository : RepositoryBase<byte, ProductCategoryBase>, IProductCategoryRepository
+    public class ProductCategoryRepository : RepositoryBase<int, ProductCategoryBase>, IProductCategoryRepository
     {
         private readonly ShopContext _shopContext;
 

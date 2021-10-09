@@ -10,7 +10,7 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Mapping
         {
             builder.ToTable("ProductCategories");
             builder.HasKey(hk => hk.Id);
-            //builder.Property(p => p.Id).ValueGeneratedOnAdd();
+            builder.Property(p => p.Id).ValueGeneratedOnAdd();
             builder.Property(p => p.Name).IsRequired().HasMaxLength(100);
             builder.Property(p => p.Description).IsRequired().HasMaxLength(500);
             builder.Property(p => p.Picture).IsRequired().HasMaxLength(256);

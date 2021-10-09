@@ -16,22 +16,30 @@ namespace TopraqShop.Presentation.ServiceHost.Areas.Administration.Pages.ShopMan
         {
             _productCategoryApplication = productCategoryApplication;
         }
-
         public void OnGet(ProductCategorySearchModel searchModel)
         {
             ProductCategories = _productCategoryApplication.Search(searchModel);
         }
-
-
         public IActionResult OnGetCreate()
         {
             return Partial("./Create", new CreateProductCategory());
         }
-
         public IActionResult OnPostCreate(CreateProductCategory command)
         {
             var result = _productCategoryApplication.Create(command);
             return new JsonResult(result);
+        }
+
+        public IActionResult OnGetEdit(byte id)
+        {
+            var editProductCategory = _productCategoryApplication.GetDetails(id);
+            return Partial("./Edit", editProductCategory);
+        }
+
+        public IActionResult OnPostEdit(EditProductCategory productCategory)
+        {
+            var operationResult = _productCategoryApplication.Edit(productCategory);
+            return new JsonResult(operationResult);
         }
     }
 }

@@ -13,10 +13,10 @@ SinglePage.LoadModal = function () {
             const container = document.getElementById("ModalContent");
             const forms = container.getElementsByTagName("form");
             const newForm = forms[forms.length - 1];
-            //$.validator.unobtrusive.parse(newForm);
+            $.validator.unobtrusive.parse(newForm);
             showModal();
         }).fail(function (error) {
-            alert("خطایی رخ داده، لطفا با مدیر سیستم تماس بگیرید.");
+            alert("We have got an error, please contact with administrator!");
         });
 };
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
                         CallBackHandler(data, action, form);
                     },
                     error: function (data) {
-                        alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
+                        alert("We have got an error, please contact with administrator!");
                     }
                 });
             }
@@ -137,7 +137,7 @@ function checkSlugDuplication(url, dist) {
         url: url + '/' + id,
         success: function (data) {
             if (data) {
-                sendNotification('error', 'top right', "خطا", "اسلاگ نمی تواند تکراری باشد");
+                sendNotification('error', 'top right', "Error", "you cannot enter duplicated slug!");
             }
         }
     });
@@ -162,7 +162,7 @@ $(document).on("click",
             url = url + "/" + fieldValue;
         }
         if (button.data("request-confirm") == true) {
-            if (confirm("آیا از انجام این عملیات اطمینان دارید؟")) {
+            if (confirm("Are you sur?")) {
                 handleAjaxCall(method, url, data);
             }
         } else {
@@ -179,7 +179,7 @@ function handleAjaxCall(method, url, data) {
             function (data) {
 
             }).fail(function (error) {
-                alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
+                alert("We have got an error, please contact with administrator!");
             });
     }
 }

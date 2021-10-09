@@ -11,7 +11,8 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Migrations
                 name: "ProductCategories",
                 columns: table => new
                 {
-                    Id = table.Column<byte>(type: "tinyint", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Picture = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),

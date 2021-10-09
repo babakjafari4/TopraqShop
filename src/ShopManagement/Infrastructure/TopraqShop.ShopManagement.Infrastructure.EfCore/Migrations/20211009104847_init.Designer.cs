@@ -10,7 +10,7 @@ using TopraqShop.ShopManagement.Infrastructure.EfCore;
 namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    [Migration("20211007160532_init")]
+    [Migration("20211009104847_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,8 +23,10 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Migrations
 
             modelBuilder.Entity("TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate.ProductCategoryBase", b =>
                 {
-                    b.Property<byte>("Id")
-                        .HasColumnType("tinyint");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
