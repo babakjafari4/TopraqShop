@@ -3,12 +3,123 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{52D80DCA-AAAF-4B4C-9174-7149B0299233}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopManagement", "ShopManagement", "{E0C0CBD4-6301-4BAF-A065-A4F01C86F3A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F09FCA0F-22FD-45C5-812A-631958812A73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{46D41BE9-D69C-45E7-92AE-36552F5C9920}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.Framework.Base", "src\Framework\TopraqShop.Framework.Base\TopraqShop.Framework.Base.csproj", "{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Domain.Base", "src\ShopManagement\Domain\TopraqShop.ShopManagement.Domain.Base\TopraqShop.ShopManagement.Domain.Base.csproj", "{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopManagement", "ShopManagement", "{7437686F-A44C-4A9F-A6B2-E406585F3F2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{07754E0D-D731-49F0-A3AC-F93B36B841E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Domain.Base.Tests.Unit", "test\ShopManagement\Domain\TopraqShop.ShopManagement.Domain.Base.Tests.Unit\TopraqShop.ShopManagement.Domain.Base.Tests.Unit.csproj", "{174F859F-CCD8-4694-9889-B973BA228AC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{B8DA61AF-22CA-46D9-8A95-849435C927C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Domain.Application.Contracts", "src\ShopManagement\Domain\Application\TopraqShop.ShopManagement.Domain.Application.Contracts\TopraqShop.ShopManagement.Domain.Application.Contracts.csproj", "{7628DB97-8374-4FCA-A3A7-E701BB7FED00}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Domain.Application.Base", "src\ShopManagement\Domain\Application\TopraqShop.ShopManagement.Domain.Application.Base\TopraqShop.ShopManagement.Domain.Application.Base.csproj", "{01C7EC9E-17B7-4FAE-ACF3-768F7D029D14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{0E94AA50-EAB1-4C66-AE86-2060AC3A816C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.Framework.Base.Tests.Unit", "test\Framework\TopraqShop.Framework.Base.Tests.Unit\TopraqShop.Framework.Base.Tests.Unit.csproj", "{289D1BC9-5D85-4B8F-B2D4-56138C52B4F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{F86BAA17-B18E-47C2-AB37-869165FD0BE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Application.Base.Tests.Unit", "test\ShopManagement\Application\TopraqShop.ShopManagement.Domain.Application.Base.Tests.Unit\TopraqShop.ShopManagement.Application.Base.Tests.Unit.csproj", "{054269DA-EEF2-4056-B039-2204084F38D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E6A03E24-2EA3-4D24-B519-7EC22FE1BC50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Infrastructure.EfCore", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.EfCore\TopraqShop.ShopManagement.Infrastructure.EfCore.csproj", "{E7043DD4-D152-425F-996A-D8152D5014FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Infrastructure.Configuration", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.Configuration\TopraqShop.ShopManagement.Infrastructure.Configuration.csproj", "{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6E9F17F1-F2A5-4B97-8344-3571F4B80ED2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.Presentation.ServiceHost", "src\Presentation\TopraqShop.Presentation.ServiceHost\TopraqShop.Presentation.ServiceHost.csproj", "{ACE04209-FA01-4631-8467-BAD70C4BA5E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174F859F-CCD8-4694-9889-B973BA228AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174F859F-CCD8-4694-9889-B973BA228AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174F859F-CCD8-4694-9889-B973BA228AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174F859F-CCD8-4694-9889-B973BA228AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7628DB97-8374-4FCA-A3A7-E701BB7FED00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7628DB97-8374-4FCA-A3A7-E701BB7FED00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7628DB97-8374-4FCA-A3A7-E701BB7FED00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7628DB97-8374-4FCA-A3A7-E701BB7FED00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C7EC9E-17B7-4FAE-ACF3-768F7D029D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C7EC9E-17B7-4FAE-ACF3-768F7D029D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C7EC9E-17B7-4FAE-ACF3-768F7D029D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C7EC9E-17B7-4FAE-ACF3-768F7D029D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{289D1BC9-5D85-4B8F-B2D4-56138C52B4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{289D1BC9-5D85-4B8F-B2D4-56138C52B4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{289D1BC9-5D85-4B8F-B2D4-56138C52B4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{289D1BC9-5D85-4B8F-B2D4-56138C52B4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054269DA-EEF2-4056-B039-2204084F38D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054269DA-EEF2-4056-B039-2204084F38D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054269DA-EEF2-4056-B039-2204084F38D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054269DA-EEF2-4056-B039-2204084F38D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7043DD4-D152-425F-996A-D8152D5014FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7043DD4-D152-425F-996A-D8152D5014FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7043DD4-D152-425F-996A-D8152D5014FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7043DD4-D152-425F-996A-D8152D5014FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE04209-FA01-4631-8467-BAD70C4BA5E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE04209-FA01-4631-8467-BAD70C4BA5E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE04209-FA01-4631-8467-BAD70C4BA5E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE04209-FA01-4631-8467-BAD70C4BA5E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0C0CBD4-6301-4BAF-A065-A4F01C86F3A1} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
+		{F09FCA0F-22FD-45C5-812A-631958812A73} = {E0C0CBD4-6301-4BAF-A065-A4F01C86F3A1}
+		{46D41BE9-D69C-45E7-92AE-36552F5C9920} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
+		{AFCDD98F-E748-4098-97A8-D9EED0BC2D7B} = {46D41BE9-D69C-45E7-92AE-36552F5C9920}
+		{17E7E3B9-87E7-4E6A-A0C2-BD2B843E7DE8} = {F09FCA0F-22FD-45C5-812A-631958812A73}
+		{7437686F-A44C-4A9F-A6B2-E406585F3F2B} = {52D80DCA-AAAF-4B4C-9174-7149B0299233}
+		{07754E0D-D731-49F0-A3AC-F93B36B841E3} = {7437686F-A44C-4A9F-A6B2-E406585F3F2B}
+		{174F859F-CCD8-4694-9889-B973BA228AC4} = {07754E0D-D731-49F0-A3AC-F93B36B841E3}
+		{B8DA61AF-22CA-46D9-8A95-849435C927C7} = {E0C0CBD4-6301-4BAF-A065-A4F01C86F3A1}
+		{7628DB97-8374-4FCA-A3A7-E701BB7FED00} = {B8DA61AF-22CA-46D9-8A95-849435C927C7}
+		{01C7EC9E-17B7-4FAE-ACF3-768F7D029D14} = {B8DA61AF-22CA-46D9-8A95-849435C927C7}
+		{0E94AA50-EAB1-4C66-AE86-2060AC3A816C} = {52D80DCA-AAAF-4B4C-9174-7149B0299233}
+		{289D1BC9-5D85-4B8F-B2D4-56138C52B4F8} = {0E94AA50-EAB1-4C66-AE86-2060AC3A816C}
+		{F86BAA17-B18E-47C2-AB37-869165FD0BE1} = {7437686F-A44C-4A9F-A6B2-E406585F3F2B}
+		{054269DA-EEF2-4056-B039-2204084F38D6} = {F86BAA17-B18E-47C2-AB37-869165FD0BE1}
+		{E6A03E24-2EA3-4D24-B519-7EC22FE1BC50} = {E0C0CBD4-6301-4BAF-A065-A4F01C86F3A1}
+		{E7043DD4-D152-425F-996A-D8152D5014FC} = {E6A03E24-2EA3-4D24-B519-7EC22FE1BC50}
+		{861B63E4-2C71-4D28-9141-EA8B1E2A48D3} = {E6A03E24-2EA3-4D24-B519-7EC22FE1BC50}
+		{6E9F17F1-F2A5-4B97-8344-3571F4B80ED2} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
+		{ACE04209-FA01-4631-8467-BAD70C4BA5E7} = {6E9F17F1-F2A5-4B97-8344-3571F4B80ED2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDA1DE0D-7934-4E28-9097-B2D1BD54565D}
 	EndGlobalSection
 EndGlobal

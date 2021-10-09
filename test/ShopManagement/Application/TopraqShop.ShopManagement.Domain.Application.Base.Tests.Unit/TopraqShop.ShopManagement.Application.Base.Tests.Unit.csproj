@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fluentassertions" Version="6.1.0" />
+    <PackageReference Include="microsoft.net.test.sdk" Version="16.11.0" />
+    <PackageReference Include="nsubstitute" Version="4.2.2" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.console" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\ShopManagement\Domain\Application\TopraqShop.ShopManagement.Domain.Application.Base\TopraqShop.ShopManagement.Domain.Application.Base.csproj" />
+    <ProjectReference Include="..\..\..\..\src\ShopManagement\Domain\TopraqShop.ShopManagement.Domain.Base\TopraqShop.ShopManagement.Domain.Base.csproj" />
+  </ItemGroup>
+
+</Project>
