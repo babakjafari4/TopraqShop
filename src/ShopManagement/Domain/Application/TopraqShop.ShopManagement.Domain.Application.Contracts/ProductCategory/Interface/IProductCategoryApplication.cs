@@ -12,7 +12,7 @@ namespace TopraqShop.ShopManagement.Domain.Application.Contracts.ProductCategory
         OperationResult Deactivate(byte id);
         OperationResult Activate(byte id);
         List<ProductCategoryViewModel> GetAll();
-        List<ProductCategoryViewModel> Search(ProductCategorySearchModel categorySearchModel);
+        List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel);
         EditProductCategory GetDetails(byte id);
     }
 }

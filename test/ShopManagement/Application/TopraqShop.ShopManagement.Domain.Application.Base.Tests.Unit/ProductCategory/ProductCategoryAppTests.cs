@@ -17,7 +17,7 @@ namespace TopraqShop.ShopManagement.Application.Base.Tests.Unit.ProductCategory
         public ProductCategoryAppTests()
         {
             _productCategoryRepository = Substitute.For<IProductCategoryRepository>();
-            _productCategoryApplication = new ProductCategoryApplication(_productCategoryRepository);
+            _productCategoryApplication = new ProductCategoryApplication(_productCategoryRepository,null);
         }
 
         [Fact]
@@ -186,7 +186,7 @@ namespace TopraqShop.ShopManagement.Application.Base.Tests.Unit.ProductCategory
         [Fact]
         public void GetDetails_ShouldReturnOneRecord_WhenCalled()
         {
-            _productCategoryRepository.GetDetails(1).Returns(
+            _productCategoryRepository.GetBy(1).Returns(
                 new ProductCategoryBase("name",
                     "description",
                     "picture",

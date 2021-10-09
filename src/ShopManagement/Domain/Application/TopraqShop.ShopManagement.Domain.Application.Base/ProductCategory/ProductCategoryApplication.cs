@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using AutoMapper;
 using TopraqShop.Framework.Base.Application;
 using TopraqShop.ShopManagement.Domain.Application.Contracts.ProductCategory.Concrete;
 using TopraqShop.ShopManagement.Domain.Application.Contracts.ProductCategory.Interface;
@@ -11,10 +13,12 @@ namespace TopraqShop.ShopManagement.Domain.Application.Base.ProductCategory
     public class ProductCategoryApplication : IProductCategoryApplication
     {
         private readonly IProductCategoryRepository _productCategoryRepository;
+        private readonly IMapper _mapper;
 
-        public ProductCategoryApplication(IProductCategoryRepository productCategoryRepository)
+        public ProductCategoryApplication(IProductCategoryRepository productCategoryRepository, IMapper mapper)
         {
             _productCategoryRepository = productCategoryRepository;
+            _mapper = mapper;
         }
 
         public OperationResult Create(CreateProductCategory createProductCategory)
@@ -97,23 +101,31 @@ namespace TopraqShop.ShopManagement.Domain.Application.Base.ProductCategory
             }).ToList();
         }
 
-        public List<ProductCategoryViewModel> Search(ProductCategorySearchModel categorySearchModel)
+        public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)
         {
-            return _productCategoryRepository.GetAll().Select(s => new ProductCategoryViewModel
-            {
-                Picture = s.Picture,
-                CreatedOn = s.CreatedOn.ToString(CultureInfo.InvariantCulture),
-                Id = s.Id,
-                ModifiedOn = s.ModifiedOn.ToString(CultureInfo.InvariantCulture),
-                Name = s.Name
-                //TODO: ProductsCount = s.
-            }).ToList();
+            //return _mapper.Map<List<ProductCategoryViewModel>>(_productCategoryRepository.GetAll());
+
+            var query = _productCategoryRepository.GetAll().Select(s =>
+                new ProductCategoryViewModel
+                {
+                    Picture = s.Picture,
+                    CreatedOn = s.CreatedOn.ToString(CultureInfo.InvariantCulture),
+                    Id = s.Id,
+                    ModifiedOn = s.ModifiedOn.ToString(CultureInfo.InvariantCulture),
+                    Name = s.Name
+                    //TODO: ProductsCount = s.
+                });
+
+            if (!string.IsNullOrWhiteSpace(searchModel.Name))
+                query =
+                    query.Where(w => w.Name.Contains(searchModel.Name,StringComparison.InvariantCultureIgnoreCase));
+
+            return query.OrderByDescending(ob => ob.Id).ToList();
         }
 
         public EditProductCategory GetDetails(byte id)
         {
-            var productCategoryBase = _productCategoryRepository.GetDetails(id);
-
+            var productCategoryBase = _productCategoryRepository.GetBy(id);
             return new EditProductCategory
             {
                 Name = productCategoryBase.Name,
