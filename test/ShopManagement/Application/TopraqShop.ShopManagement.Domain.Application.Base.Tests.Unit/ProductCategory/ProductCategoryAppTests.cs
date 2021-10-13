@@ -178,7 +178,7 @@ namespace TopraqShop.ShopManagement.Application.Base.Tests.Unit.ProductCategory
                     "picture title", "keywords", "meta description", "slug")
             });
 
-            var productCategoryViewModels = _productCategoryApplication.Search(Arg.Any<ProductCategorySearchModel>());
+            var productCategoryViewModels = _productCategoryApplication.Search(new ProductCategorySearchModel());
             _productCategoryRepository.Received(1);
             productCategoryViewModels.Should().HaveCountGreaterOrEqualTo(1);
         }

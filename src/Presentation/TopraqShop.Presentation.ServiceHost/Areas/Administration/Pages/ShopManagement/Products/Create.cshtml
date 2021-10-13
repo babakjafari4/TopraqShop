@@ -1,0 +1,128 @@
+﻿@model TopraqShop.ShopManagement.Domain.Application.Contracts.Product.Concrete.CreateProduct
+
+<div class="modal-header">
+    <button class="close" type="button" data-dismiss="modal" aria-hidden="True">x</button>
+    <h4 class="modal-title">Create New Product Category</h4>
+</div>
+
+
+<form asp-page="./Index"
+      asp-page-handler="Create"
+      method="post"
+      aria-ajax="true"
+      data-callback=""
+      data-action="Refresh">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.CategoryId"></label>
+                    <select class="form-control" asp-for="CategoryId" asp-items='new SelectList(Model.ProductCategories, "Id", "Name")'>
+                        <option value="0">Select Category</option>
+                    </select>
+                    <span class="error" asp-validation-for="CategoryId"></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Name"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Name" onchange="makeSlug('Name', 'Slug')" />
+                    <span class="error" asp-validation-for="Name"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Slug"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Slug" onchange="makeSlug('Name', 'Slug')" />
+                    <span class="error" asp-validation-for="Slug"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Code"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Code" />
+                    <span class="error" asp-validation-for="Code"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.UnitPrice"></label>
+                    <input class="form-control" type="text" asp-for="@Model.UnitPrice" />
+                    <span class="error" asp-validation-for="UnitPrice"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Picture"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Picture" />
+                    <span class="error" asp-validation-for="Picture"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.PictureAlt"></label>
+                    <input class="form-control" type="text" asp-for="@Model.PictureAlt" />
+                    <span class="error" asp-validation-for="PictureAlt"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.PictureTitle"></label>
+                    <input class="form-control" type="text" asp-for="@Model.PictureTitle" />
+                    <span class="error" asp-validation-for="PictureTitle"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Keywords"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Keywords" />
+                    <span class="error" asp-validation-for="Keywords"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.ShortDescription"></label>
+                    <textarea class="form-control" rows="3" asp-for="ShortDescription" onchange="fillField('ShortDescription', 'MetaDescription');"></textarea>
+                    <span class="error" asp-validation-for="ShortDescription"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Description"></label>
+                    <textarea class="form-control" rows="6" asp-for="Description" ></textarea>
+                    <span class="error" asp-validation-for="Description"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.MetaDescription"></label>
+                    <textarea class="form-control" rows="6" asp-for="MetaDescription"></textarea>
+                    <span class="error" asp-validation-for="MetaDescription"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default waves-effect" type="button" data-dismiss="modal">Close</button>
+        <button class="btn btn-success waves-effect waves-light" type="submit">Create</button>
+    </div>
+</form>

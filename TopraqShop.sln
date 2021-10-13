@@ -39,13 +39,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E6A03E24-2EA3-4D24-B519-7EC22FE1BC50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Infrastructure.EfCore", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.EfCore\TopraqShop.ShopManagement.Infrastructure.EfCore.csproj", "{E7043DD4-D152-425F-996A-D8152D5014FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Infrastructure.EfCore", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.EfCore\TopraqShop.ShopManagement.Infrastructure.EfCore.csproj", "{E7043DD4-D152-425F-996A-D8152D5014FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Infrastructure.Configuration", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.Configuration\TopraqShop.ShopManagement.Infrastructure.Configuration.csproj", "{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Infrastructure.Configuration", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.Configuration\TopraqShop.ShopManagement.Infrastructure.Configuration.csproj", "{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6E9F17F1-F2A5-4B97-8344-3571F4B80ED2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.Presentation.ServiceHost", "src\Presentation\TopraqShop.Presentation.ServiceHost\TopraqShop.Presentation.ServiceHost.csproj", "{ACE04209-FA01-4631-8467-BAD70C4BA5E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.Presentation.ServiceHost", "src\Presentation\TopraqShop.Presentation.ServiceHost\TopraqShop.Presentation.ServiceHost.csproj", "{ACE04209-FA01-4631-8467-BAD70C4BA5E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

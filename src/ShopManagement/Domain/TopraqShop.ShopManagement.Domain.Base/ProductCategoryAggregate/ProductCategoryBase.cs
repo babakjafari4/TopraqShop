@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using TopraqShop.Framework.Base.Domain;
+using TopraqShop.ShopManagement.Domain.Base.ProductAggregate;
 
 namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
 {
@@ -13,6 +17,8 @@ namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
+
+        public List<ProductBase> Products { get; set; }
 
         public ProductCategoryBase(string name, string description, string picture, string pictureAlt, string pictureTitle,
             string keywords, string metaDescription, string slug)
@@ -92,6 +98,10 @@ namespace TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate
                 throw new NullReferenceException($"{nameof(MetaDescription)} cannot be null!");
             if (string.IsNullOrWhiteSpace(Slug))
                 throw new NullReferenceException($"{nameof(Slug)} cannot be null!");
+
+
+            if (CreatedOn > ModifiedOn)
+                throw new ValidationException($"{nameof(CreatedOn)} cannot be greater then {nameof(ModifiedOn)}!");
         }
     }
 }

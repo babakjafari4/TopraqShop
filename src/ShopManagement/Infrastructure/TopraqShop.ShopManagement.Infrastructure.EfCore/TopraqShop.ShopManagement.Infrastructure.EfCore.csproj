@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mapping\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Domain\TopraqShop.ShopManagement.Domain.Base\TopraqShop.ShopManagement.Domain.Base.csproj" />
   </ItemGroup>
 

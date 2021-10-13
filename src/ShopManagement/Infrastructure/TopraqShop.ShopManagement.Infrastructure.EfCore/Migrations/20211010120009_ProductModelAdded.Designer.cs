@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TopraqShop.ShopManagement.Infrastructure.EfCore;
 
 namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    partial class ShopContextModelSnapshot : ModelSnapshot
+    [Migration("20211010120009_ProductModelAdded")]
+    partial class ProductModelAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -156,47 +158,6 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Migrations
                     b.ToTable("ProductCategories");
                 });
 
-            modelBuilder.Entity("TopraqShop.ShopManagement.Domain.Base.ProductPictureAggregate.ProductPictureBase", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Picture")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PictureAlt")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PictureTitle")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<long>("ProductId")
-                        .HasColumnType("bigint");
-
-                    b.Property<byte>("Status")
-                        .HasColumnType("tinyint");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductPictures");
-                });
-
             modelBuilder.Entity("TopraqShop.ShopManagement.Domain.Base.ProductAggregate.ProductBase", b =>
                 {
                     b.HasOne("TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate.ProductCategoryBase", "ProductCategoryBase")
@@ -206,22 +167,6 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Migrations
                         .IsRequired();
 
                     b.Navigation("ProductCategoryBase");
-                });
-
-            modelBuilder.Entity("TopraqShop.ShopManagement.Domain.Base.ProductPictureAggregate.ProductPictureBase", b =>
-                {
-                    b.HasOne("TopraqShop.ShopManagement.Domain.Base.ProductAggregate.ProductBase", "ProductBase")
-                        .WithMany("ProductPictures")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ProductBase");
-                });
-
-            modelBuilder.Entity("TopraqShop.ShopManagement.Domain.Base.ProductAggregate.ProductBase", b =>
-                {
-                    b.Navigation("ProductPictures");
                 });
 
             modelBuilder.Entity("TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate.ProductCategoryBase", b =>

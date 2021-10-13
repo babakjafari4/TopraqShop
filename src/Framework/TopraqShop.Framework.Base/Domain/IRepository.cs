@@ -8,6 +8,7 @@ namespace TopraqShop.Framework.Base.Domain
     {
         TEntity GetBy(TKey id);
         List<TEntity> GetAll();
+        List<TEntity> GetAllWithJoins<TProperty>(Expression<Func<TEntity, TProperty>> expression);
         void Create(TEntity entity);
         bool IsExists(Expression<Func<TEntity, bool>> expression);
         int Commit();

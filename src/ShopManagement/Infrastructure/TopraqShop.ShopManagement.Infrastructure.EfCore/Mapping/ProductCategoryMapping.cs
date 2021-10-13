@@ -4,7 +4,7 @@ using TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate;
 
 namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Mapping
 {
-    public class ProductCategoryMapping:IEntityTypeConfiguration<ProductCategoryBase>
+    public class ProductCategoryMapping : IEntityTypeConfiguration<ProductCategoryBase>
     {
         public void Configure(EntityTypeBuilder<ProductCategoryBase> builder)
         {
@@ -22,6 +22,11 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Mapping
             builder.Property(p => p.CreatedOn).IsRequired();
             builder.Property(p => p.ModifiedOn).IsRequired();
             builder.Property(p => p.Status).IsRequired();
+
+            builder
+                .HasMany(hm => hm.Products)
+                .WithOne(wo => wo.ProductCategoryBase)
+                .HasForeignKey(hf => hf.ProductCategoryId);
         }
     }
 }
