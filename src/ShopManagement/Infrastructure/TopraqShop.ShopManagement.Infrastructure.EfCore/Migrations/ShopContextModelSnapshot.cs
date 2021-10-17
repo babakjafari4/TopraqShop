@@ -217,6 +217,11 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
                     b.Property<DateTime>("ModifiedOn")
                         .HasColumnType("datetime2");
 

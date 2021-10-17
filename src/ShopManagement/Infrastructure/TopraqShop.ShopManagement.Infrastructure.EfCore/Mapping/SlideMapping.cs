@@ -18,6 +18,7 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore.Mapping
             builder.Property(p => p.Title).HasMaxLength(255);
             builder.Property(p => p.Text).HasMaxLength(255);
             builder.Property(p => p.ButtonText).IsRequired().HasMaxLength(50);
+            builder.Property(p => p.Link).IsRequired().HasMaxLength(256);
         }
     }
 }

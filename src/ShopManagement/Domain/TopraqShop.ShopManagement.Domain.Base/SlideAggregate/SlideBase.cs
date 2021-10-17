@@ -12,10 +12,11 @@ namespace TopraqShop.ShopManagement.Domain.Base.SlideAggregate
         public string Title { get; private set; }
         public string Text { get; private set; }
         public string ButtonText { get; private set; }
+        public string Link { get; private set; }
 
 
         public SlideBase(string picture, string pictureAlt, string pictureTitle, string heading, string title,
-            string text, string buttonText)
+            string text, string buttonText, string link)
         {
             Picture = picture;
             PictureAlt = pictureAlt;
@@ -24,6 +25,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.SlideAggregate
             Title = title;
             Text = text;
             ButtonText = buttonText;
+            Link = link;
 
             CreatedOn = DateTime.Now;
             ModifiedOn = DateTime.Now;
@@ -33,7 +35,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.SlideAggregate
         }
 
         public void Edit(string picture, string pictureAlt, string pictureTitle, string heading, string title,
-            string text, string buttonText)
+            string text, string buttonText, string link)
         {
             Picture = picture;
             PictureAlt = pictureAlt;
@@ -42,6 +44,7 @@ namespace TopraqShop.ShopManagement.Domain.Base.SlideAggregate
             Title = title;
             Text = text;
             ButtonText = buttonText;
+            Link = link;
 
             ModifiedOn = DateTime.Now;
             

@@ -71,6 +71,16 @@
                 </div>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Link"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Link" />
+                    <span class="error" asp-validation-for="Link"></span>
+                </div>
+            </div>
+        </div>
         <input type="hidden" asp-for="Id" />
     </div>
     <div class="modal-footer">

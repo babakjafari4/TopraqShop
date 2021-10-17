@@ -26,7 +26,7 @@ namespace TopraqShop.ShopManagement.Domain.Application.Base.Slide
                 return new OperationResult().Failed(ApplicationMessages.DuplicatedRecord);
 
             var slideBase = new SlideBase(createProduct.Picture, createProduct.PictureAlt, createProduct.PictureTitle,
-                createProduct.Heading, createProduct.Title, createProduct.Text, createProduct.ButtonText);
+                createProduct.Heading, createProduct.Title, createProduct.Text, createProduct.ButtonText, createProduct.Link);
             _slideRepository.Create(slideBase);
             _slideRepository.Commit();
 
@@ -46,7 +46,7 @@ namespace TopraqShop.ShopManagement.Domain.Application.Base.Slide
                 return new OperationResult().Failed(ApplicationMessages.DuplicatedRecord);
 
             slideBase.Edit(editSlide.Picture, editSlide.PictureAlt, editSlide.PictureTitle, editSlide.Heading,
-                editSlide.Title, editSlide.Text, editSlide.ButtonText);
+                editSlide.Title, editSlide.Text, editSlide.ButtonText, editSlide.Link);
             _slideRepository.Commit();
             return new OperationResult().Succeeded();
         }
@@ -113,7 +113,7 @@ namespace TopraqShop.ShopManagement.Domain.Application.Base.Slide
         {
             var slideBase = _slideRepository.GetBy(id);
             var editSlide = new EditSlide(slideBase.Id, slideBase.Picture, slideBase.PictureAlt, slideBase.PictureTitle,
-                slideBase.Heading, slideBase.Title, slideBase.Text, slideBase.ButtonText);
+                slideBase.Heading, slideBase.Title, slideBase.Text, slideBase.ButtonText, slideBase.Link);
             return editSlide;
         }
     }

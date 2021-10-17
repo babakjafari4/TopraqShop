@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="CustomerDiscountAggregate\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\TopraqShop.Framework.Base\TopraqShop.Framework.Base.csproj" />
+    <ProjectReference Include="..\..\..\ShopManagement\Domain\TopraqShop.ShopManagement.Domain.Base\TopraqShop.ShopManagement.Domain.Base.csproj" />
+  </ItemGroup>
+
+</Project>

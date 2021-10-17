@@ -28,6 +28,9 @@ namespace TopraqShop.ShopManagement.Domain.Application.Contracts.Slide.Concrete
         [Required, MaxLength(50), MinLength(3)]
         public string ButtonText { get; set; }
 
+        [Required, MaxLength(256), MinLength(10)]
+        public string Link { get; set; }
+
 
 
         public EditSlide()
@@ -35,7 +38,7 @@ namespace TopraqShop.ShopManagement.Domain.Application.Contracts.Slide.Concrete
             
         }
 
-        public EditSlide(int id,string picture, string pictureAlt, string pictureTitle, string heading, string title, string text, string buttonText)
+        public EditSlide(int id,string picture, string pictureAlt, string pictureTitle, string heading, string title, string text, string buttonText, string link)
         {
             Id = id;
             Picture = picture;
@@ -45,6 +48,7 @@ namespace TopraqShop.ShopManagement.Domain.Application.Contracts.Slide.Concrete
             Title = title;
             Text = text;
             ButtonText = buttonText;
+            Link = link;
         }
     }
 }

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Query\TopraqShop.Query.Base\TopraqShop.Query.Base.csproj" />
     <ProjectReference Include="..\..\Domain\Application\TopraqShop.ShopManagement.Domain.Application.Base\TopraqShop.ShopManagement.Domain.Application.Base.csproj" />
     <ProjectReference Include="..\TopraqShop.ShopManagement.Infrastructure.EfCore\TopraqShop.ShopManagement.Infrastructure.EfCore.csproj" />
   </ItemGroup>

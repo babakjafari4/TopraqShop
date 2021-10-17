@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using TopraqShop.Query.Base.Contracts.ProductCategory;
+using TopraqShop.Query.Base.Contracts.Slide;
+using TopraqShop.Query.Base.Query.ProductCategory;
+using TopraqShop.Query.Base.Query.Slide;
 using TopraqShop.ShopManagement.Domain.Application.Base.Product;
 using TopraqShop.ShopManagement.Domain.Application.Base.ProductCategory;
 using TopraqShop.ShopManagement.Domain.Application.Base.ProductPicture;
@@ -32,7 +36,10 @@ namespace TopraqShop.ShopManagement.Infrastructure.Configuration
              
             services.AddTransient<ISlideApplication, SlideApplication>();
             services.AddTransient<ISlideRepository, SlideRepository>();
-            
+
+            services.AddTransient<ISlideQuery, SlideQuery>();
+            services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
+
             services.AddAutoMapper(typeof(ShopManagementBootstrapper));
             services.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
         }
