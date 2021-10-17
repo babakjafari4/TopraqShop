@@ -3,12 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TopraqShop.DiscountManagement.Application.Contracts.CustomerDiscount.Concrete
 {
-    public class CreateCustomerDiscount
+    public class EditCustomerDiscount
     {
-        [Required, Range(1,100_000)]
+        public int Id { get; set; }
+        [Required, Range(1, 100_000)]
         public long ProductId { get; set; }
 
-        [Required, Range(0,100)]
+        [Required, Range(0, 100)]
         public float DiscountRate { get; set; }
 
         [Required]
@@ -20,7 +21,7 @@ namespace TopraqShop.DiscountManagement.Application.Contracts.CustomerDiscount.C
         [MinLength(3), MaxLength(500)]
         public string Reason { get; set; }
 
-        public CreateCustomerDiscount(long productId, float discountRate, DateTime startDate, DateTime endDate, string reason)
+        public EditCustomerDiscount(long productId, float discountRate, DateTime startDate, DateTime endDate, string reason)
         {
             ProductId = productId;
             DiscountRate = discountRate;

@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CustomerDiscount\" />
+    <ProjectReference Include="..\..\Domain\TopraqShop.DiscountManagement.Domain.Base\TopraqShop.DiscountManagement.Domain.Base.csproj" />
+    <ProjectReference Include="..\TopraqShop.DiscountManagement.Application.Contracts\TopraqShop.DiscountManagement.Application.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

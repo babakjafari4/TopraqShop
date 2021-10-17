@@ -11,4 +11,8 @@
     <Folder Include="CustomerDiscount\Interface\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\TopraqShop.Framework.Base\TopraqShop.Framework.Base.csproj" />
+  </ItemGroup>
+
 </Project>
