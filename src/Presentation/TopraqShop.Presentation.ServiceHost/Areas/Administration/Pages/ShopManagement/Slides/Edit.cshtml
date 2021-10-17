@@ -1,0 +1,90 @@
+﻿@model TopraqShop.ShopManagement.Domain.Application.Contracts.Slide.Concrete.EditSlide
+
+<div class="modal-header">
+    <button class="close" type="button" data-dismiss="modal" aria-hidden="True">x</button>
+    <h4 class="modal-title">Edit Slide: @Model.PictureTitle</h4>
+</div>
+
+
+<form asp-page="./Index"
+      asp-page-handler="Edit"
+      method="post"
+      aria-ajax="true"
+      data-callback=""
+      data-action="Refresh">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Picture"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Picture" />
+                    <span class="error" asp-validation-for="Picture"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.PictureAlt"></label>
+                    <input class="form-control" type="text" asp-for="@Model.PictureAlt" />
+                    <span class="error" asp-validation-for="PictureAlt"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.PictureTitle"></label>
+                    <input class="form-control" type="text" asp-for="@Model.PictureTitle" />
+                    <span class="error" asp-validation-for="PictureTitle"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Heading"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Heading" />
+                    <span class="error" asp-validation-for="Heading"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Title"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Title" />
+                    <span class="error" asp-validation-for="Title"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.ButtonText"></label>
+                    <input class="form-control" type="text" asp-for="@Model.ButtonText" />
+                    <span class="error" asp-validation-for="ButtonText"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Text"></label>
+                    <textarea class="form-control" asp-for="Text" rows="5"></textarea>
+                    <span class="error" asp-validation-for="Text"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" asp-for="@Model.Link"></label>
+                    <input class="form-control" type="text" asp-for="@Model.Link" />
+                    <span class="error" asp-validation-for="Link"></span>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default waves-effect" type="button" data-dismiss="modal">Close</button>
+        <button class="btn btn-success waves-effect waves-light" type="submit">Edit</button>
+    </div>
+</form>

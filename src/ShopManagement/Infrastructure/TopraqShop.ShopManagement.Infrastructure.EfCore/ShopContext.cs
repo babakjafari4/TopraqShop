@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TopraqShop.ShopManagement.Domain.Base.ProductAggregate;
 using TopraqShop.ShopManagement.Domain.Base.ProductCategoryAggregate;
+using TopraqShop.ShopManagement.Domain.Base.ProductPictureAggregate;
+using TopraqShop.ShopManagement.Domain.Base.SlideAggregate;
 using TopraqShop.ShopManagement.Infrastructure.EfCore.Mapping;
 
 namespace TopraqShop.ShopManagement.Infrastructure.EfCore
@@ -11,6 +14,9 @@ namespace TopraqShop.ShopManagement.Infrastructure.EfCore
         }
 
         public DbSet<ProductCategoryBase> ProductCategories { get; set; }
+        public DbSet<ProductBase> Products { get; set; }
+        public DbSet<ProductPictureBase> ProductPictures { get; set; }
+        public DbSet<SlideBase> Slides { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

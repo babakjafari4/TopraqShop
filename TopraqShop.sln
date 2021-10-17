@@ -39,13 +39,35 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E6A03E24-2EA3-4D24-B519-7EC22FE1BC50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Infrastructure.EfCore", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.EfCore\TopraqShop.ShopManagement.Infrastructure.EfCore.csproj", "{E7043DD4-D152-425F-996A-D8152D5014FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Infrastructure.EfCore", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.EfCore\TopraqShop.ShopManagement.Infrastructure.EfCore.csproj", "{E7043DD4-D152-425F-996A-D8152D5014FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.ShopManagement.Infrastructure.Configuration", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.Configuration\TopraqShop.ShopManagement.Infrastructure.Configuration.csproj", "{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.ShopManagement.Infrastructure.Configuration", "src\ShopManagement\Infrastructure\TopraqShop.ShopManagement.Infrastructure.Configuration\TopraqShop.ShopManagement.Infrastructure.Configuration.csproj", "{861B63E4-2C71-4D28-9141-EA8B1E2A48D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6E9F17F1-F2A5-4B97-8344-3571F4B80ED2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.Presentation.ServiceHost", "src\Presentation\TopraqShop.Presentation.ServiceHost\TopraqShop.Presentation.ServiceHost.csproj", "{ACE04209-FA01-4631-8467-BAD70C4BA5E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.Presentation.ServiceHost", "src\Presentation\TopraqShop.Presentation.ServiceHost\TopraqShop.Presentation.ServiceHost.csproj", "{ACE04209-FA01-4631-8467-BAD70C4BA5E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Query", "Query", "{18D282EC-608F-4B17-980B-67698572112A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.Query.Base", "src\Query\TopraqShop.Query.Base\TopraqShop.Query.Base.csproj", "{4E638FA1-EF86-4F11-B35B-EA1AA64E259F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscountManagement", "DiscountManagement", "{75820502-D707-4E83-9FBD-AE2748C66FB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{14072EC3-1360-4258-9825-F7C75BE8D162}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{294670A4-A4A7-41AB-A5DC-F8AA2F18F907}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{2DFC8916-6F77-4BFF-AD70-ABEB3C6DF3D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.DiscountManagement.Domain.Base", "src\DiscountManagement\Domain\TopraqShop.DiscountManagement.Domain.Base\TopraqShop.DiscountManagement.Domain.Base.csproj", "{63E91EF8-024F-4821-8002-844E7DFC35A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.DiscountManagement.Application.Base", "src\DiscountManagement\Applicaiton\TopraqShop.DiscountManagement.Application.Base\TopraqShop.DiscountManagement.Application.Base.csproj", "{99196260-977B-45C9-8400-0C905E2ECDB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopraqShop.DiscountManagement.Application.Contracts", "src\DiscountManagement\Applicaiton\TopraqShop.DiscountManagement.Application.Contracts\TopraqShop.DiscountManagement.Application.Contracts.csproj", "{60025665-26F7-450B-AF16-A25A40C0313A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.DiscountManagement.Infrastructure.EfCore", "src\DiscountManagement\Infrastructure\TopraqShop.DiscountManagement.Infrastructure.EfCore\TopraqShop.DiscountManagement.Infrastructure.EfCore.csproj", "{D692A131-620C-4A06-A051-BAE80DBFC063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopraqShop.DiscountManagement.Infrastructure.Configuration", "src\DiscountManagement\Infrastructure\TopraqShop.DiscountManagement.Infrastructure.Configuration\TopraqShop.DiscountManagement.Infrastructure.Configuration.csproj", "{D4D5BFD3-7C83-4FDC-9C4C-8EEAA480C8F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +115,30 @@ Global
 		{ACE04209-FA01-4631-8467-BAD70C4BA5E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACE04209-FA01-4631-8467-BAD70C4BA5E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACE04209-FA01-4631-8467-BAD70C4BA5E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E638FA1-EF86-4F11-B35B-EA1AA64E259F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E638FA1-EF86-4F11-B35B-EA1AA64E259F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E638FA1-EF86-4F11-B35B-EA1AA64E259F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E638FA1-EF86-4F11-B35B-EA1AA64E259F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63E91EF8-024F-4821-8002-844E7DFC35A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E91EF8-024F-4821-8002-844E7DFC35A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E91EF8-024F-4821-8002-844E7DFC35A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E91EF8-024F-4821-8002-844E7DFC35A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99196260-977B-45C9-8400-0C905E2ECDB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99196260-977B-45C9-8400-0C905E2ECDB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99196260-977B-45C9-8400-0C905E2ECDB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99196260-977B-45C9-8400-0C905E2ECDB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60025665-26F7-450B-AF16-A25A40C0313A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60025665-26F7-450B-AF16-A25A40C0313A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60025665-26F7-450B-AF16-A25A40C0313A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60025665-26F7-450B-AF16-A25A40C0313A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D692A131-620C-4A06-A051-BAE80DBFC063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D692A131-620C-4A06-A051-BAE80DBFC063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D692A131-620C-4A06-A051-BAE80DBFC063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D692A131-620C-4A06-A051-BAE80DBFC063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D5BFD3-7C83-4FDC-9C4C-8EEAA480C8F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D5BFD3-7C83-4FDC-9C4C-8EEAA480C8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D5BFD3-7C83-4FDC-9C4C-8EEAA480C8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D5BFD3-7C83-4FDC-9C4C-8EEAA480C8F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +164,17 @@ Global
 		{861B63E4-2C71-4D28-9141-EA8B1E2A48D3} = {E6A03E24-2EA3-4D24-B519-7EC22FE1BC50}
 		{6E9F17F1-F2A5-4B97-8344-3571F4B80ED2} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
 		{ACE04209-FA01-4631-8467-BAD70C4BA5E7} = {6E9F17F1-F2A5-4B97-8344-3571F4B80ED2}
+		{18D282EC-608F-4B17-980B-67698572112A} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
+		{4E638FA1-EF86-4F11-B35B-EA1AA64E259F} = {18D282EC-608F-4B17-980B-67698572112A}
+		{75820502-D707-4E83-9FBD-AE2748C66FB3} = {46E7A860-6AA8-4DEB-B79F-4F65E004B2E5}
+		{14072EC3-1360-4258-9825-F7C75BE8D162} = {75820502-D707-4E83-9FBD-AE2748C66FB3}
+		{294670A4-A4A7-41AB-A5DC-F8AA2F18F907} = {75820502-D707-4E83-9FBD-AE2748C66FB3}
+		{2DFC8916-6F77-4BFF-AD70-ABEB3C6DF3D9} = {75820502-D707-4E83-9FBD-AE2748C66FB3}
+		{63E91EF8-024F-4821-8002-844E7DFC35A1} = {14072EC3-1360-4258-9825-F7C75BE8D162}
+		{99196260-977B-45C9-8400-0C905E2ECDB2} = {294670A4-A4A7-41AB-A5DC-F8AA2F18F907}
+		{60025665-26F7-450B-AF16-A25A40C0313A} = {294670A4-A4A7-41AB-A5DC-F8AA2F18F907}
+		{D692A131-620C-4A06-A051-BAE80DBFC063} = {2DFC8916-6F77-4BFF-AD70-ABEB3C6DF3D9}
+		{D4D5BFD3-7C83-4FDC-9C4C-8EEAA480C8F7} = {2DFC8916-6F77-4BFF-AD70-ABEB3C6DF3D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDA1DE0D-7934-4E28-9097-B2D1BD54565D}

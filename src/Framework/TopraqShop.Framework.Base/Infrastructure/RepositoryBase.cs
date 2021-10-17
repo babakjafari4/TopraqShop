@@ -25,6 +25,11 @@ namespace TopraqShop.Framework.Base.Infrastructure
             return _dbContext.Set<TEntity>().ToList();
         }
 
+        public List<TEntity> GetAllWithJoins<TProperty>(Expression<Func<TEntity, TProperty>> expression)
+        {
+            return _dbContext.Set<TEntity>().Include(expression).ToList();
+        }
+
         public void Create(TEntity entity)
         {
             _dbContext.Add(entity);
